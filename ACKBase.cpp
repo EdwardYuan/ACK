@@ -6,6 +6,8 @@
  */
 
 #include "ACKBase.h"
+#include "gom.h"
+#include <cstdlib>
 
 ACK_Base::ACK_Base()
 {
@@ -19,7 +21,10 @@ ACK_Base::~ACK_Base()
 }
 
 
-void SendMsgTo(ACK_Base* obj, ACK_MSG msg)
+bool SendMsgTo(ACK_Base* obj, ACK_MSG msg)
 {
-
+	if (obj == NULL)
+		return false;
+	else
+		return true;
 }

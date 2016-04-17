@@ -28,7 +28,7 @@ public:
 	ACK_Base();
 	virtual ~ACK_Base();
 
-	void SendMsgTo(ACK_Base* obj, ACK_MSG msg);
+	bool SendMsgTo(ACK_Base* obj, ACK_MSG msg);
 };
 
 #endif /* ACKBASE_H_ */
