@@ -8,6 +8,8 @@
 #ifndef ACKBASE_H_
 #define ACKBASE_H_
 
+#include <list>
+
 struct ACK_MSG
 {
 	int msg_id;
@@ -15,16 +17,12 @@ struct ACK_MSG
 	char *msgContent;
 };
 
-struct ACK_MSG_BOX
-{
-
-};
-
 class ACK_Base
 {
 protected:
-	ACK_MSG *msgBox;
-	int msgCnt = 0;
+	std::list<ACK_MSG> *msgBox;
+	// ACK_MSG *msgBox;
+	// int msgCnt = 0;
 public:
 	ACK_Base();
 	virtual ~ACK_Base();
