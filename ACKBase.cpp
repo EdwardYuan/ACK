@@ -12,7 +12,8 @@
 ACK_Base::ACK_Base()
 {
 	// TODO Auto-generated constructor stub
-
+	msgBox = malloc(sizeof(ACK_MSG));
+	msgCnt = 0;
 }
 
 ACK_Base::~ACK_Base()
@@ -21,10 +22,21 @@ ACK_Base::~ACK_Base()
 }
 
 
-bool SendMsgTo(ACK_Base* obj, ACK_MSG msg)
+bool ACK_Base::SendMsgTo(ACK_Base* obj, ACK_MSG msg)
 {
 	if (obj == NULL)
 		return false;
 	else
 		return true;
+}
+
+void ACK_Base::RecvMsg(ACK_MSG *msg)
+{
+	ACK_MSG *tmpMsg;
+	tmpMsg = malloc(sizeof(ACK_MSG));
+	tmpMsg->msg_id = msg->msg_id;
+	tmpMsg->msgContent = msg->msgContent;
+	tmpMsg->next = NULL;
+	msgBox->next = tmpMsg;
+	msgCnt++;
 }

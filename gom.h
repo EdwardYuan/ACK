@@ -9,9 +9,14 @@
 #ifndef GOM_H_
 #define GOM_H_
 
+#include <vector>
+
+using std::vector;
+
 class gom
 {
 public:
+	std::vector<int> objIds;
 	gom();
 	virtual ~gom();
 };

@@ -23,12 +23,15 @@ struct ACK_MSG_BOX
 class ACK_Base
 {
 protected:
-	ACK_MSG *MsgBox;
+	ACK_MSG *msgBox;
+	int msgCnt = 0;
 public:
 	ACK_Base();
 	virtual ~ACK_Base();
 
 	bool SendMsgTo(ACK_Base* obj, ACK_MSG msg);
+	void RecvMsg(ACK_MSG *msg);
+
 };
 
 #endif /* ACKBASE_H_ */
