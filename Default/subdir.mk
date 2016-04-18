@@ -5,15 +5,18 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../ACKBase.cpp \
-../gom.cpp 
+../gom.cpp \
+../main.cpp 
 
 OBJS += \
 ./ACKBase.o \
-./gom.o 
+./gom.o \
+./main.o 
 
 CPP_DEPS += \
 ./ACKBase.d \
-./gom.d 
+./gom.d \
+./main.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

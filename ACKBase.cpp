@@ -15,12 +15,12 @@ using namespace std;
 ACK_Base::ACK_Base()
 {
 	// TODO Auto-generated constructor stub
-//	msgCnt = 0;
 }
 
 ACK_Base::~ACK_Base()
 {
 	// TODO Auto-generated destructor stub
+	msgBox->clear();
 }
 
 

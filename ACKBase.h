@@ -13,7 +13,6 @@
 struct ACK_MSG
 {
 	int msg_id;
-	ACK_MSG * next;
 	char *msgContent;
 };
 
@@ -21,8 +20,6 @@ class ACK_Base
 {
 protected:
 	std::list<ACK_MSG> *msgBox;
-	// ACK_MSG *msgBox;
-	// int msgCnt = 0;
 public:
 	ACK_Base();
 	virtual ~ACK_Base();

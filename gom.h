@@ -16,9 +16,13 @@ using std::vector;
 class gom
 {
 public:
-	std::vector<int> objIds;
+	std::vector<long> objIds;  // refer to the address of objects
 	gom();
 	virtual ~gom();
+
+	bool AddObjAddrToGom(long addr);
+private:
+	std::vector<long> FindObjByaddr(long addr);
 };
 
 #endif /* GOM_H_ */
