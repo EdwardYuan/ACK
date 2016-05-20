@@ -5,8 +5,10 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     ACKBase.cpp \
-    gom.cpp
+    gom.cpp \
+    test/test.cpp
 
 HEADERS += \
     ACKBase.h \
-    gom.h
+    gom.h \
+    test/test.h

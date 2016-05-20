@@ -21,13 +21,14 @@ class ACK_Base
 {
 protected:
     std::queue <ACK_MSG> *msgBox;
+    void Bind(int MsgId, void *);
 public:
 	ACK_Base();
 	virtual ~ACK_Base();
 
 	bool SendMsgTo(ACK_Base* obj, ACK_MSG msg);
-	void RecvMsg(ACK_MSG *msg);
-    void Bind(int MsgId, void *);
+    void RecvMsg(ACK_MSG *msg);
+    virtual void InitMsgEvents() = 0;
 
 };
 
