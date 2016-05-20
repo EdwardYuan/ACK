@@ -8,7 +8,6 @@
 #include "ACKBase.h"
 #include "gom.h"
 #include <cstdlib>
-#include <list>
 
 using namespace std;
 
@@ -20,7 +19,7 @@ ACK_Base::ACK_Base()
 ACK_Base::~ACK_Base()
 {
 	// TODO Auto-generated destructor stub
-	msgBox->clear();
+    msgBox->empty();
 }
 
 
@@ -35,5 +34,10 @@ bool ACK_Base::SendMsgTo(ACK_Base* obj, ACK_MSG msg)
 void ACK_Base::RecvMsg(ACK_MSG *msg)
 {
 	ACK_MSG *tmpMsg;
-	msgBox->push_back(*msg);
+    msgBox->push(*msg);
+}
+
+void ACK_Base::Bind(int MsgId, void *)
+{
+
 }
