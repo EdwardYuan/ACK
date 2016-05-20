@@ -1,18 +1,10 @@
-/*
- * main.cpp
- */
-
-#include "gom.h"
-#include "ACKBase.h"
 #include <iostream>
+#include <ACKBase.h>
 
 using namespace std;
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
-	cout << "test done. " << endl;
+    cout << "Hello World!" << endl;
+    return 0;
 }
-
-
-
-
