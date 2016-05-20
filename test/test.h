@@ -6,6 +6,4 @@ class MyClass : public ACK_Base
 {
 public:
     void InitMsgEvents();
-private:
-    void ProcessMsg0();
 };

@@ -21,7 +21,7 @@ class ACK_Base
 {
 protected:
     std::queue <ACK_MSG> *msgBox;
-    void Bind(int MsgId, void *);
+    void Bind(struct ACK_MSG msg, void *);
 public:
 	ACK_Base();
 	virtual ~ACK_Base();

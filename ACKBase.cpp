@@ -37,7 +37,7 @@ void ACK_Base::RecvMsg(ACK_MSG *msg)
     msgBox->push(*msg);
 }
 
-void ACK_Base::Bind(int MsgId, void *)
+void ACK_Base::Bind(struct ACK_MSG msg, void *)
 {
 
 }
