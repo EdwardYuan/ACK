@@ -11,4 +11,5 @@ SOURCES += main.cpp \
 HEADERS += \
     ACKBase.h \
     gom.h \
-    test/test.h
+    test/test.h \
+    global.h
