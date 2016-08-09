@@ -25,3 +25,8 @@ bool gom::AddObjAddrToGom(long addr)
 	return false;
 }
 
+void gom::ProcessMsgs(void)
+{
+
+}
+

@@ -10,18 +10,23 @@
 #define GOM_H_
 
 #include <vector>
+#include <queue>
+#include "global.h"
 
 using std::vector;
 
 class gom
 {
 public:
-	std::vector<long> objIds;  // refer to the address of objects
 	gom();
 	virtual ~gom();
 
 	bool AddObjAddrToGom(long addr);
 private:
+    std::vector<long> objIds;  // refer to the address of objects
+    std::queue<ACKMsg> msgs;
+
+    void ProcessMsgs(void);
 	std::vector<long> FindObjByaddr(long addr);
 };
 
